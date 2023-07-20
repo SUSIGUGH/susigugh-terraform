@@ -7,8 +7,9 @@ pipeline {
                 sh 'ls -ltr'
                 sh 'terraform init'
                 sh 'terraform plan'
+                sh 'terraform destroy -auto-approve'
                 sh 'terraform apply -auto-approve'
-                sh 'terraform destory -auto-approve'
+                sh 'terraform destroy -auto-approve'
             }
         }
     }
